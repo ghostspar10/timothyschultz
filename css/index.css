@@ -32,10 +32,9 @@ html, body {
     max-width: 100%;
 }
 
-.text-container {
-    position: relative;
-    margin-top: 10px;
-    margin-bottom: 10px;
+.container-about {
+    max-width: 70%;
+    margin: 50px auto 0 auto;
 }
 
 /* Navbar */
@@ -117,4 +116,13 @@ footer h1 {
 
 img {
     max-width: 100%;
+}
+
+#about2 {
+    margin: 50px auto 0 auto;
+    max-width: 500px;
+}
+
+#about3 {
+    margin-top: 100px;
 }
