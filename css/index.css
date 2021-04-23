@@ -4,15 +4,38 @@
     padding: 0px;
 }
 
-body {
+html, body {
+    height: 100%;
     font-family: sans-serif;
     text-align: center;
     font-weight: 400;
 }
 
 .container {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
+    overflow: auto;
+    padding-bottom: 100px;
+}
+
+.container-navbar {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.container-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    /*padding-top: 30px;*/
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.text-container {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /* Navbar */
@@ -58,34 +81,36 @@ nav a:hover {
     color: black;
 }
 
-nav a::before {
-    content: '';
-    display: block;
-    height: 5px;
-    width: 100%;
-    background-color: black;
-    position: absolute;
-    top: 0;
-    width: 0%;
-}
 
 nav a:hover::before {
     width: 100;
 }
 
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-}
-
-.video-container iframe, .video-container object, .video-container embed {
+.container-video iframe, .video-container object, .video-container embed {
     position: absolute; 
     top: 0; 
     left: 0; 
     width: 100%; 
     height: 100%;
+}
+
+footer {
+    background-color:rgba(0, 0, 0);
+    position: relative;
+    height: 50px;
+    margin-top: -50px;
+    clear: both;
+}
+
+footer h1 {
+    color: white;
+}
+
+#container {
+    min-height: 100%;
+}
+
+#main {
+    overflow: auto;
+    padding-bottom: 50px;
 }
