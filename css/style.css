@@ -1,14 +1,403 @@
-/* Get rid of default settings */
-* { /* Selects everything on web page */
-    margin: 0px;
-    padding: 0px;
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
 }
 
-html, body {
-    height: 100%;
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/* MY CODE */
+
+* {
+    text-decoration: none;
+}
+
+body {
+    background-color: rgb(24, 24, 24);
+}
+
+
+header {
+    background-color: rgb(32, 32, 32);
+    width: 100%;
+    height: 100px;
+}
+
+header .header-brand {
     font-family: sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    display: block;
+    margin: 0 auto;
     text-align: center;
-    font-weight: 400;
+    padding: 20px 0;
+}
+
+header nav ul {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+header nav ul li {
+    display: inline-block;
+    float: left;
+    list-style: none;
+    padding: 0px 16px;
+}
+
+header nav ul li a{
+    font-family: sans-serif;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+
+@media only screen and (min-width: 768px) {
+    header .header-brand {
+        margin: 31px 0;
+        text-align: left;
+        line-height: 38px;
+        padding: 0px 20px 0px 40px;
+        border-right: 3px solid rgb(255, 255, 255);
+        float: left;
+    }
+
+    header nav ul {
+        margin: 20px 0 0px 20px;
+        float: left;
+    }
+
+    header nav ul li a{
+        line-height: 60px;
+    }
+}
+
+/*///////////////// INDEX /////////////////*/
+/*/////////////////////////////////////////*/
+
+.index-banner {
+    width: 100%;
+    height: calc(100vh - 100px);
+    background-image: url(../img/mountain-background.PNG);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: table;
+}
+
+.vertical-center {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/*
+.index-banner h2 {
+    font-family: sans-serif;
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 70px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 8px #111;
+}
+
+.index-banner h1 {
+    font-family: sans-serif;
+    font-size: 28px;
+    font-weight: 100;
+    line-height: 40px;
+    font-style: italic;
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 8px #111;
+}*/
+
+.index-links div {
+    margin: 16px 16px 0;
+    width: calc(100% - 32px);
+    height: 100px;
+    background-color: rgb(80, 34, 20);
+}
+
+.index-links div:hover {
+    background-color: rgb(58, 25, 14);
+}
+
+.index-links div h3 {
+    font-family: arial;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 100px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@media only screen and (min-width: 1000px) {
+    .index-wrapper {
+        width: 1000px;
+        margin: 0 auto;
+    }
+
+    .index-banner {
+        height: 500px
+    }
+
+    .index-links {
+        overflow: hidden;
+    }
+
+    .index-links div {
+        margin: 20px 10px 0;
+        height: 230px;
+        float: left;
+    }
+
+    .index-boxlink-square {
+        width: calc(25% - 20px) !important;
+    }
+
+    .index-boxlink-rectangle {
+        width: calc(50% - 20px) !important;
+    }
+
+    .index-links div h3 {
+        line-height: 230px;
+    }
+}
+
+/*/////////////// PORTFOLIO ///////////////*/
+/*/////////////////////////////////////////*/
+
+.portfolio-wrapper {
+    overflow: hidden;
+}
+
+.portfolio-info-left, .portfolio-info-right {
+    width: 100%;
+}
+
+.portfolio-info-left h2, .portfolio-info-right h2 {
+    text-align: left;
+    padding: 30px 30px 20px;
+    font-family: arial;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    line-height: 44px;
+}
+
+.portfolio-info-left p, .portfolio-info-right p {
+    text-align: left;
+    padding: 0px 30px 20px;
+    font-family: arial;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    line-height: 24px;
+}
+
+.portfolio-img-left, .portfolio-img-right {
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    .portfolio-wrapper {
+        width: 600px;
+        margin: 0 auto;
+    }
+
+    .portfolio-info-left h2, .portfolio-info-right h2 {
+        padding: 20px 0px 0px;
+    }
+    
+    .portfolio-img-info-left p, .portfolio-info-right p {
+        padding: 20px 0px 0px;
+    }
+
+    .portfolio-img-left, .portfolio-img-right {
+        padding-top: 30px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .portfolio-wrapper {
+        width: 1000px;
+    }
+
+
+    .portfolio-info-left {
+        width: 50%;
+        float: left;
+    }
+
+    .portfolio-info-right {
+        width: 50%;
+        float: right;
+    }
+
+    .portfolio-info-left h2 {
+        padding: 20px 0px 0px;
+    }
+    
+    .portfolio-info-left p {
+        padding: 20px 30px 0px 0px;
+    }
+
+    .portfolio-info-right h2 {
+        padding: 20px 0px 0px 30px;
+    }
+    
+    .portfolio-info-right p {
+        padding: 20px 0px 0px 30px;
+    }
+
+    .portfolio-img-left {
+        padding-top: 20px;
+        width: 50%;
+        float:left;
+    }
+
+    .portfolio-img-right {
+        padding-top: 20px;
+        width: 50%;
+        float:right;
+    }
+}
+
+/*//////////////// FOOTER /////////////////*/
+/*/////////////////////////////////////////*/
+
+footer {
+    width: calc(100%-80px);
+    margin-top: 20px;
+    padding: 40px 40px;
+    background-color: #111;
+    overflow: hidden;
+}
+
+footer ul {
+    width: fit-content;
+    float: left;
+    padding-left: 20px;
+}
+
+footer ul li {
+    display: block;
+    list-style: none;
+}
+
+footer ul li a{
+    font-family: arial;
+    font-size: 24px;
+    color: #fff;
+    line-height: 35px;
+}
+
+.footer-sm {
+    width: 60px;
+    float: right;
+}
+
+.footer-sm img {
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 .container {
@@ -18,10 +407,7 @@ html, body {
     padding-bottom: 100px;
 }
 
-.container-navbar {
-    width: 70%;
-    margin: 0 auto;
-}
+
 
 .container-video {
     position: relative;
@@ -39,70 +425,12 @@ html, body {
 
 /* Navbar */
 
-header {
-    background: rgba(0, 0, 0, 0.5)
-}
-
-header::after {
-    content: '';
-    display: table;
-    clear: both;
-}
-
-/*.logo {
-    float: left;
-    padding: 10px 0;
-}*/
-
-/*nav {
-    float: right;
-}*/
-
-nav ul {
-    list-style-type: none;
-}
-
-nav li {
-    display: inline-block;
-    margin-left: 70px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    position: relative;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-nav a:hover {
-    color: black;
-}
-
-
-nav a:hover::before {
-    width: 100;
-}
-
 .container-video iframe, .video-container object, .video-container embed {
     position: absolute; 
     top: 0; 
     left: 0; 
     width: 100%; 
     height: 100%;
-}
-
-footer {
-    background-color:rgba(0, 0, 0);
-    position: relative;
-    height: 50px;
-    margin-top: -50px;
-    clear: both;
-}
-
-footer h1 {
-    color: white;
 }
 
 #container {
@@ -112,17 +440,4 @@ footer h1 {
 #main {
     overflow: auto;
     padding-bottom: 50px;
-}
-
-img {
-    max-width: 100%;
-}
-
-#about2 {
-    margin: 50px auto 0 auto;
-    max-width: 500px;
-}
-
-#about3 {
-    margin-top: 100px;
 }
