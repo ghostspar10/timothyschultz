@@ -54,18 +54,22 @@
                         </div>
                     </div>
                     <div class="contactForm">
-                        <form>
+                        <form id="myForm">
                             <h2>Send Message</h2>
                             <div class="input-box">
-                                <input type="text" name="" required="required">
+                                <input type="text" id="name" required="required">
                                 <span>Full Name</span>
                             </div>
                             <div class="input-box">
-                                <input type="text" name="" required="required">
+                                <input type="text" id="email" required="required">
                                 <span>Email</span>
                             </div>
                             <div class="input-box">
-                                <textarea required="required"></textarea>
+                                <input type="text" id="subject" required="required">
+                                <span>Subject</span>
+                            </div>
+                            <div class="input-box">
+                                <textarea id="message" required="required"></textarea>
                                 <span>Type your Message...</span>
                             </div>
                             <div class="input-box">
@@ -103,5 +107,7 @@
         </div>
     </body>
 
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="js/navbar.js"></script>
+    <script src="js/contact.js"></script>
 </html>
