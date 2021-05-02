@@ -6,7 +6,8 @@ Author: Richard Clark - http://richclarkdesign.com
 Twitter: @rich_clark
 */
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800');
+
 
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -28,6 +29,7 @@ time, mark, audio, video {
     vertical-align:baseline;
     background:transparent;
 }
+
 
 body {
     line-height:1;
@@ -98,6 +100,7 @@ hr {
     margin:1em 0;
     padding:0;
 }
+
 
 input, select {
     vertical-align:middle;
@@ -185,20 +188,20 @@ body {
     color: grey;
 }
 
-.icon {
+.navbar .icon {
     color: white;
     font-size: 20px;
     cursor: pointer;
     display: none;
 }
 
-.icon.cancel-btn {
+.navbar .icon.cancel-btn {
     position: absolute;
     right: 30px;
     top: 50px;
 }
 
-.icon.menu-btn {
+.navbar .icon.menu-btn {
     position: absolute;
     right: 30px;
     top: 30px;
@@ -211,11 +214,11 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-    .icon {
+    .navbar .icon {
         display: table-cell;
     }
 
-    .icon.hide {
+    .navbar .icon.hide {
         display: none;
     }
 
@@ -429,6 +432,177 @@ body {
     .portfolio-img-right {
         width: 50%;
         float:right;
+    }
+}
+
+/*//////////////// CONTACT ////////////////*/
+/*/////////////////////////////////////////*/
+
+.contact {
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact .contact-wrapper {
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact .contact-wrapper h2 {
+    font-size: 70px;
+    font-weight: 500px;
+}
+
+.contact .contact-wrapper p {
+    font-size: 24px;
+    font-weight: 300px;
+    margin-top: 20px;
+}
+
+.contact-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.contact-container .contact-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-container .contact-info .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.contact-container .contact-info .box .icon {
+    font-size: 26px;
+    min-width: 60px;
+    height: 60px;
+    color: white;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;;
+}
+
+.contact-container .contact-info .box .contact-text {
+    display: flex;
+    margin-left: 20px;
+    font-size: 18px;
+    flex-direction: column;
+    font-weight: 300px;
+}
+
+.contact-container .contact-info .box .contact-text h3 {
+    font-size: 20px;
+    font-weight: 500px;
+}
+
+.contact-container .contact-info .box .contact-text p {
+    margin-top: 10px;
+}
+
+.contactForm {
+    width: 40%;
+    padding: 40px;
+    background: #000;
+}
+
+.contactForm h2 {
+    color: white;
+    font-size: 30px;
+    font-weight: 500px;
+}
+
+.contactForm .input-box {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .input-box input, 
+.contactForm .input-box textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    color:white;
+    background-color: black;
+    border-bottom: 2px solid white;
+    outline: none;
+    resize: none;
+}
+
+.contactForm .input-box span {
+    position: absolute;
+    left: 0;
+    color: white;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: rgb(235, 224, 224)
+}
+
+.contactForm .input-box input:focus ~ span,
+.contactForm .input-box input:valid ~ span,
+.contactForm .input-box textarea:focus ~ span,
+.contactForm .input-box textarea:valid ~ span {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-17px);
+}
+
+.contactForm .input-box input[type="submit"] {
+    width: 100px;
+    color: black;
+    background: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.contactForm .input-box input[type="submit"]:hover {
+    background: rgb(190, 187, 187);
+    transition: 0.3s;
+}
+
+@media only screen and (max-width: 1000px){
+    .contact {
+        padding: 150px 50px 50px 50px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-container .contact-info {
+        margin-bottom: 40px;
+    }
+
+    .contact-container .contact-info,
+    .contactForm {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .contact-container {
+        width: 1000px;
     }
 }
 
