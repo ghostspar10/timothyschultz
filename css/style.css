@@ -6,6 +6,8 @@ Author: Richard Clark - http://richclarkdesign.com
 Twitter: @rich_clark
 */
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -104,168 +106,206 @@ input, select {
 /* MY CODE */
 
 * {
+    padding: 0;
+    margin: 0;
     text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: rgb(24, 24, 24);
+    font-family: 'Montserrat';
 }
 
-
-header {
-    background-color: rgb(32, 32, 32);
-    width: 100%;
-    height: 100px;
-}
-
-header .header-brand {
-    font-family: sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    color: rgb(255, 255, 255);
-    text-transform: uppercase;
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px 0;
-}
-
-header nav ul {
-    display: block;
-    margin: 0 auto;
-    width: fit-content;
-}
-
-header nav ul li {
-    display: inline-block;
-    float: left;
-    list-style: none;
-    padding: 0px 16px;
-}
-
-header nav ul li a{
-    font-family: sans-serif;
-    font-size: 16px;
-    color: rgb(255, 255, 255);
-    text-transform: uppercase;
-}
-
-@media only screen and (min-width: 768px) {
-    header .header-brand {
-        margin: 31px 0;
-        text-align: left;
-        line-height: 38px;
-        padding: 0px 20px 0px 40px;
-        border-right: 3px solid rgb(255, 255, 255);
-        float: left;
-    }
-
-    header nav ul {
-        margin: 20px 0 0px 20px;
-        float: left;
-    }
-
-    header nav ul li a{
-        line-height: 60px;
-    }
-}
-
-/*///////////////// INDEX /////////////////*/
+/*//////////////// HEADER /////////////////*/
 /*/////////////////////////////////////////*/
 
-.index-banner {
-    width: 100%;
-    height: calc(100vh - 100px);
-    background-image: url(../img/mountain-background.PNG);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    display: table;
+.content {
+    max-width: 1000px;
+    margin: auto;
 }
 
-.vertical-center {
+.navbar {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    z-index: 5;
+    display: block;
+    background: #101010;
+    padding: 10px 0;
+}
+
+.navbar .content {
+    padding: 0px 30px;
+    height: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+.navbar .logo {
+    height: 100%;
+    display: table;
+    float: left;
+}
+
+.navbar .logo a {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 800px;
     display: table-cell;
     vertical-align: middle;
 }
 
-/*
-.index-banner h2 {
-    font-family: sans-serif;
-    font-size: 60px;
-    font-weight: 900;
-    line-height: 70px;
+.navbar .menu-list {
+    float: right;
+    height: 100%;
+    display: table;
+}
+
+.navbar .menu-list li {
+    display: table;
+    float: left;
+    height: 100%;
+    padding: 0px 20px;
+}
+
+.navbar .menu-list li:last-child {
+    padding-right: 0px;
+}
+
+.menu-list li a {
     color: #fff;
-    text-align: center;
-    text-shadow: 2px 2px 8px #111;
+    font-size: 18px;
+    font-weight: 500;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.menu-list li a:hover {
+    color: grey;
+}
+
+.icon {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.icon.cancel-btn {
+    position: absolute;
+    right: 30px;
+    top: 50px;
+}
+
+.icon.menu-btn {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .content {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .icon {
+        display: table-cell;
+    }
+
+    .icon.hide {
+        display: none;
+    }
+
+    .navbar .menu-list {
+        float: initial;
+        height: 100vh;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        max-width: 400px;
+        background: #222;
+        padding: 40px 0;
+        text-align: center;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+
+    .navbar .menu-list.active {
+        left: 0%;
+    }
+    
+    .navbar .menu-list li {
+        display: table-row-group;
+        float: initial;
+        line-height: 46px;
+    }
+
+    .menu-list li a {
+        float:initial;
+        display: initial;
+        font-size: 23px;
+    }
+
+    
+}
+
+
+
+
+/*///////////////// INDEX /////////////////*/
+/*/////////////////////////////////////////*/
+
+
+.index-banner {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/mountain-background.PNG);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: table;
+    margin-bottom: 20px;
 }
 
 .index-banner h1 {
-    font-family: sans-serif;
-    font-size: 28px;
-    font-weight: 100;
-    line-height: 40px;
-    font-style: italic;
-    color: #fff;
+    font-size: 72px;
     text-align: center;
-    text-shadow: 2px 2px 8px #111;
-}*/
-
-.index-links div {
-    margin: 16px 16px 0;
-    width: calc(100% - 32px);
-    height: 100px;
-    background-color: rgb(80, 34, 20);
+    color: white;
+    display:table-cell;
+    vertical-align: middle;
+    text-shadow: 0px 3px 3px #000000;
 }
 
-.index-links div:hover {
-    background-color: rgb(58, 25, 14);
+.index-segment {
+    height: 100%;
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-.index-links div h3 {
-    font-family: arial;
-    font-size: 28px;
-    font-weight: 500;
-    line-height: 100px;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    text-transform: uppercase;
+.content h1 {
+    color: black;
+    font-size: 50px;
+    margin: 0px 0px 20px 20px;
 }
 
-@media only screen and (min-width: 1000px) {
-    .index-wrapper {
-        width: 1000px;
-        margin: 0 auto;
-    }
-
-    .index-banner {
-        height: 500px
-    }
-
-    .index-links {
-        overflow: hidden;
-    }
-
-    .index-links div {
-        margin: 20px 10px 0;
-        height: 230px;
-        float: left;
-    }
-
-    .index-boxlink-square {
-        width: calc(25% - 20px) !important;
-    }
-
-    .index-boxlink-rectangle {
-        width: calc(50% - 20px) !important;
-    }
-
-    .index-links div h3 {
-        line-height: 230px;
-    }
+.content p {
+    color: black;
+    margin: 0px 0px 0px 20px;
 }
 
 /*/////////////// PORTFOLIO ///////////////*/
 /*/////////////////////////////////////////*/
+
+.portfolio-main {
+    padding-top: 100px;
+}
 
 .portfolio-wrapper {
     overflow: hidden;
@@ -278,18 +318,16 @@ header nav ul li a{
 .portfolio-info-left h2, .portfolio-info-right h2 {
     text-align: left;
     padding: 30px 30px 20px;
-    font-family: arial;
     font-size: 50px;
-    color: rgb(255, 255, 255);
+    color: black;
     line-height: 44px;
 }
 
 .portfolio-info-left p, .portfolio-info-right p {
     text-align: left;
     padding: 0px 30px 20px;
-    font-family: arial;
     font-size: 16px;
-    color: rgb(255, 255, 255);
+    color: black;
     line-height: 24px;
 }
 
@@ -297,10 +335,26 @@ header nav ul li a{
     width: 100%;
 }
 
+.container-video-left, .container-video-right {
+    position: relative;
+    padding-bottom: 56.25%;
+}
+
+
+.container-video-left iframe, .container-video-right iframe, 
+.video-container-left object, .video-container-left object,
+.video-container-left embed, .video-container-right embed {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+}
+
 @media only screen and (min-width: 768px) {
     .portfolio-wrapper {
         width: 600px;
-        margin: 0 auto;
+        margin: 0 auto 20px auto;
     }
 
     .portfolio-info-left h2, .portfolio-info-right h2 {
@@ -310,16 +364,35 @@ header nav ul li a{
     .portfolio-img-info-left p, .portfolio-info-right p {
         padding: 20px 0px 0px;
     }
-
-    .portfolio-img-left, .portfolio-img-right {
-        padding-top: 30px;
-    }
 }
 
 @media only screen and (min-width: 1000px) {
     .portfolio-wrapper {
         width: 1000px;
     }
+
+    .container-video-left {
+        height: 50%;
+        width: 50%;
+        float: left;
+    }
+
+    .container-video-right {
+        height: 100%;
+        width: 50%;
+        float: right;
+    }
+
+    .container-video-left, .container-video-right {
+        padding-bottom: 28.125%;
+    }
+
+
+    .container-video-left iframe, .container-video-right iframe, 
+    .video-container-left object, .video-container-left object,
+    .video-container-left embed, .video-container-right embed {
+    height: 100%;
+}
 
 
     .portfolio-info-left {
@@ -349,13 +422,11 @@ header nav ul li a{
     }
 
     .portfolio-img-left {
-        padding-top: 20px;
         width: 50%;
         float:left;
     }
 
     .portfolio-img-right {
-        padding-top: 20px;
         width: 50%;
         float:right;
     }
@@ -364,9 +435,12 @@ header nav ul li a{
 /*//////////////// FOOTER /////////////////*/
 /*/////////////////////////////////////////*/
 
+.footer-wrapper {
+    max-width: 1000px;
+}
+
 footer {
     width: calc(100%-80px);
-    margin-top: 20px;
     padding: 40px 40px;
     background-color: #111;
     overflow: hidden;
@@ -384,7 +458,6 @@ footer ul li {
 }
 
 footer ul li a{
-    font-family: arial;
     font-size: 24px;
     color: #fff;
     line-height: 35px;
@@ -398,46 +471,4 @@ footer ul li a{
 .footer-sm img {
     width: 100%;
     margin-bottom: 10px;
-}
-
-.container {
-    max-width: 70%;
-    margin: 0 auto;
-    overflow: auto;
-    padding-bottom: 100px;
-}
-
-
-
-.container-video {
-    position: relative;
-    padding-bottom: 56.25%;
-    /*padding-top: 30px;*/
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-}
-
-.container-about {
-    max-width: 70%;
-    margin: 50px auto 0 auto;
-}
-
-/* Navbar */
-
-.container-video iframe, .video-container object, .video-container embed {
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%;
-}
-
-#container {
-    min-height: 100%;
-}
-
-#main {
-    overflow: auto;
-    padding-bottom: 50px;
 }
