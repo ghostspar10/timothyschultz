@@ -232,7 +232,7 @@ body {
         width: 100%;
         max-width: 400px;
         background: #222;
-        padding: 40px 0;
+        padding: 120px 0;
         text-align: center;
         align-items: center;
         transition: all 0.3s ease;
@@ -243,9 +243,9 @@ body {
     }
     
     .navbar .menu-list li {
-        display: table-row-group;
+        display: block;
         float: initial;
-        line-height: 46px;
+        height: 80px;
     }
 
     .menu-list li a {
